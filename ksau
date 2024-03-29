@@ -8,9 +8,7 @@ readonly CACHED_FREESPACE_TIMEOUT=$((60 * 60)) # 60s * 60m = 1h in seconds unit
 mkdir -p "$KSAU_CACHE_DIR"
 
 readonly REMOTES=(
-    "oned"
-    "hakimionedrive"
-    "saurajcf"
+    "onedrive"
 )
 SELECTED_REMOTE=oned # default
 
@@ -85,7 +83,7 @@ sanity_checks() {
 
 refresh() {
     echo "${aqua}Downloading latest rclone config${normal}"
-    wget https://gist.githubusercontent.com/hakimifr/aabebeea8c1ce0c5a6968fc0d78ed5ae/raw/rclone.conf -O rclone.conf &>/dev/null
+    wget https://raw.githubusercontent.com/phhgsi/global_index_source/master/rclone.conf -O rclone.conf &>/dev/null
     if [ "$?" -ne 0 ]; then
         echo "Config download failed!"
         return
