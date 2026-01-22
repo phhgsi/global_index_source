@@ -11,6 +11,7 @@ readonly REMOTES=(
     "oned"
     "hakimionedrive"
     "saurajcf"
+    "phhgsi"
 )
 SELECTED_REMOTE=oned # default
 
